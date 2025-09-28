@@ -18,9 +18,21 @@ public class pattern{
         }
     }
 
+    public static void printTriangle(int n){
+        int nst = 1;
+        for(int row = 1 ; row<=n;row++){
+            for(int cst = 1; cst<=nst ; cst++){
+                System.out.print("*");
+            }
+            nst++;
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args){
         // System.out.println("hello ji");
         int n = sc.nextInt();
-        printSquare(n);
+        // printSquare(n);
+        printTriangle(n);
     }
 }

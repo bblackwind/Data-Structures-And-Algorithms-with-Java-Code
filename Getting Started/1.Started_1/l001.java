@@ -9,7 +9,17 @@ public class l001{
         return count;
     }
 
+    public static void printDigitsInReverseOrder(int n){
+
+        while(n !=0 ){
+            int dig = n%10;
+            System.out.println(dig);
+            n /= 10;
+        }
+    }
+
     public static void main(String[] args){
-        System.out.println(countDigits(111));
+        // System.out.println(countDigits(111));
+        printDigitsInReverseOrder(123485278);
     }
 }

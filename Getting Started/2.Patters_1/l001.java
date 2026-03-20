@@ -1,4 +1,9 @@
+import java.util.*;
+
 public class l001{
+
+
+    public static Scanner sc = new Scanner(System.in);
 
     public static void square(int n){
         for(int i=1 ; i<=n ; i++){
@@ -19,9 +24,22 @@ public class l001{
             nst++;
         }
     }
-\
+
+    public static void invertedTriangle(int n){
+        int nst = n;
+        for(int row = 1; row <= n; row++){
+            for(int cst = 1 ; cst <= nst ; cst++){
+                System.out.print("*\t");
+            }
+            System.out.println();
+            nst--;
+        }
+    }
+
     public static void main(String[] args){
+        int n = sc.nextInt();
         // pattern(5);
-        triangle(5);
+        // triangle(5);
+        invertedTriangle(n);
     }
 }

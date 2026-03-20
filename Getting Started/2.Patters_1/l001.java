@@ -36,10 +36,28 @@ public class l001{
         }
     }
 
+    public static void mirrorTriangle(int n){
+        int nst = 1;
+        int nsp = n-1;
+
+        for(int row =1; row <=n ; row++){
+            for(int csp = 1; csp <= nsp ; csp++){
+                System.out.print("\t");
+            }
+            for(int cst = 1 ; cst <= nst ; cst++){
+                System.out.print("*\t");
+            }
+            System.out.println();
+            nsp--;
+            nst++;
+        }
+    }
+
     public static void main(String[] args){
         int n = sc.nextInt();
         // pattern(5);
         // triangle(5);
-        invertedTriangle(n);
+        // invertedTriangle(n);
+        mirrorTriangle(n);
     }
 }

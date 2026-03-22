@@ -72,12 +72,36 @@ public class l001{
         }
     }
 
+    public static void fullDiamond(int n){
+        int nst = 1, nsp = n/2;
+
+        for(int row = 1; row <= n; row++){
+            for(int csp=1 ; csp<=nsp; csp++){
+                System.out.print("\t");
+            }
+
+            for(int cst = 1; cst <= nst; cst++){
+                System.out.print("*\t");
+            }
+
+            if(row<=n/2){
+                nsp--;
+                nst+=2;
+            }else{
+                nsp++;
+                nst-=2; 
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args){
         int n = sc.nextInt();
         // pattern(5);
         // triangle(5);
         // invertedTriangle(n);
         // mirrorTriangle(n);
-        halfDiamond(n);
+        // halfDiamond(n);
+        fullDiamond(n);
     }
 }

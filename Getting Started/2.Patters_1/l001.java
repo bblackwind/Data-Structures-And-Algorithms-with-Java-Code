@@ -95,6 +95,10 @@ public class l001{
         }
     }
 
+    public static void hollowDiamond(int n){
+        
+    }
+
     public static void main(String[] args){
         int n = sc.nextInt();
         // pattern(5);

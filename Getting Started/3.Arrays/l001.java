@@ -1,13 +1,17 @@
-// import java.util.*;
+import java.util.*;
 public class l001{
 
+    public static Scanner sc = new Scanner(System.in);
+
+    public static void test1(int n){
+            int[] arr = new int[n];
+            for(int i=0;i<n;i++){
+                System.out.print(arr[i] + " ");
+            }
+    }
+
     public static void main(String[] args){
-
-        int[] arr1 = {1,2,3,4,5};
-
-        for(int i=0;i<arr1.length;i++){
-            System.out.println(arr1[i]);
-        }
-
+        int n = sc.nextInt();
+        test1(n);
     }
 }

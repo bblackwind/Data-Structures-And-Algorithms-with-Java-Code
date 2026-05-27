@@ -84,8 +84,11 @@ public class l001{
         int n = arr.length;
         int i = 0;
         int j = n-1;
-
-        swap(arr,i,j);
+        while(i<j){
+            swap(arr,i,j);
+            i++;
+            j--;
+        }
     }
 
     public static void inverseOfArray(int[] arr){
@@ -106,6 +109,48 @@ public class l001{
         }
         return maxEle - minEle;
     }
+
+    public static int[] rotateOfArray(int[] arr, int r){
+        int n = arr.length;
+        r %= n;
+        if( r<0 ){
+            r += n;
+        }
+
+        int[] ans = new int[n];
+        for(int i=0;i<n;i++){
+            int idx = (i+r) % n;
+            ans[idx] = arr[i];
+        }
+        return ans;
+    }
+
+    public static void reverseOfArray(int[] arr, int i, int j){
+        int n = arr.length;
+        
+        while(i<j){
+            swap(arr,i,j);
+            i++;
+            j--;
+        }
+    }
+
+    
+
+    public static int[] rotateOfArray2(int arr, int r){
+        int n = arr.length
+        r %= n;
+
+        if(r<0){
+            r +=n;
+        }
+
+        reverseOfArray(arr, 0, n-1);
+        reverseOfArray(arr, 0, r-1);
+        reverseOfArray(arr, r, n-1);
+    }
+
+    
 
     public static void main(String[] args){
         int n = sc.nextInt();

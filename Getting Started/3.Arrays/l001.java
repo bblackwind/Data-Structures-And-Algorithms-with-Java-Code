@@ -88,12 +88,23 @@ public class l001{
         swap(arr,i,j);
     }
 
-    public static void inverseOfArray(){
+    public static void inverseOfArray(int[] arr){
         int n = arr.length;
         int[] ans  = new int[n];
         for(int i=0 ; i<n ; i++){
             ans[arr[i]] = i;
         }
+    }
+
+    public static int spanOfArray(int[] arr){
+        int maxEle = -(int)1e9;
+        int minEle = (int)1e9;
+
+        for(int ele:arr){
+            maxEle = Math.max(maxEle,ele);
+            minEle = Math.min(minEle,ele);
+        }
+        return maxEle - minEle;
     }
 
     public static void main(String[] args){
@@ -107,8 +118,9 @@ public class l001{
         // System.out.println(maximum(arr));
         // System.out.println(minimum(arr));
         // System.out.println(find(arr,data));
-        reverseOfArray(arr);;
-        display(arr);
+        // reverseOfArray(arr);;
+        // display(arr);
+        System.out.println(spanOfArray(arr));
         
     }
 }

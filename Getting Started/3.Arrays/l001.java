@@ -135,6 +135,17 @@ public class l001{
         }
     }
 
+    public static int[] rotateOfArray2(int arr, int r){
+        int n = arr.length
+        r %= n;
+        if(r<0){
+            r +=n;
+        }
+        reverseOfArray(arr, 0, n-1);
+        reverseOfArray(arr, 0, r-1);
+        reverseOfArray(arr, r, n-1);
+    }
+
     public static void sumOfTwoArray(int[] arr1, int[] arr2){
        int n = arr1.length;
        int m = arr2.length;
@@ -162,22 +173,6 @@ public class l001{
 
     }
 
-
-
-    public static int[] rotateOfArray2(int arr, int r){
-        int n = arr.length
-        r %= n;
-
-        if(r<0){
-            r +=n;
-        }
-
-        reverseOfArray(arr, 0, n-1);
-        reverseOfArray(arr, 0, r-1);
-        reverseOfArray(arr, r, n-1);
-    }
-
-    
 
     public static void main(String[] args){
         int n = sc.nextInt();

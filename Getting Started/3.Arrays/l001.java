@@ -39,7 +39,7 @@ public class l001{
     }
 
     public static int maximum(int[] arr){
-        int maxEle = -(int) 1e9;
+        int maxEle = -(int) 1e9;  // Integer.MIN_VALUE
 
         for(int i=0 ; i<arr.length ; i++){
             if(arr[i] > maxEle){
@@ -59,6 +59,15 @@ public class l001{
         return minEle;
     }
 
+    public static int find(int[] arr, int data){
+
+        for(int i=0 ; i<arr.length ; i++){
+            if(arr[i] == data){
+                return i;
+            }
+        }
+        return -1;
+    }
 
     public static void main(String[] args){
         int n = sc.nextInt();
@@ -66,9 +75,11 @@ public class l001{
         // int[] arr = new int[n];
         // input(arr);
         int[] arr = input2(n);
+        int data = sc.nextInt();
         // display2(arr);
-        System.out.println(maximum(arr));
-        System.out.println(minimum(arr));
+        // System.out.println(maximum(arr));
+        // System.out.println(minimum(arr));
+        System.out.println(find(arr,data));
         
     }
 }

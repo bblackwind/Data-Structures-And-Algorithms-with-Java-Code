@@ -69,17 +69,38 @@ public class l001{
         return -1;
     }
 
+    public static void swap(int[] arr, int i, int j){
+        while(i<j){
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++;
+            j--;
+        }
+        
+    }
+
+    public static void reverseOfArray(int[] arr){
+        int n = arr.length;
+        int i = 0;
+        int j = n-1;
+
+        swap(arr,i,j);
+    }
+
     public static void main(String[] args){
         int n = sc.nextInt();
         // test1(n);
         // int[] arr = new int[n];
         // input(arr);
         int[] arr = input2(n);
-        int data = sc.nextInt();
+        // int data = sc.nextInt();
         // display2(arr);
         // System.out.println(maximum(arr));
         // System.out.println(minimum(arr));
-        System.out.println(find(arr,data));
+        // System.out.println(find(arr,data));
+        reverseOfArray(arr);;
+        display(arr);
         
     }
 }

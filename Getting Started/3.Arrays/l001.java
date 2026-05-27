@@ -88,6 +88,14 @@ public class l001{
         swap(arr,i,j);
     }
 
+    public static void inverseOfArray(){
+        int n = arr.length;
+        int[] ans  = new int[n];
+        for(int i=0 ; i<n ; i++){
+            ans[arr[i]] = i;
+        }
+    }
+
     public static void main(String[] args){
         int n = sc.nextInt();
         // test1(n);

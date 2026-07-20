@@ -168,6 +168,7 @@ public class l001{
             if(idx ==0 && ans[idx] == 0){
                 continue;
             }
+            
             System.out.println(ans[idx]);
         }
 

@@ -174,6 +174,31 @@ public class l001{
 
     }
 
+    public static void substractionOfTwoArray(int[] arr1, int[] arr2){
+        int n = arr.length;
+        int m = arr2.length;
+        int[] ans = new int[m];
+
+        int i = n-1, j=m-1, k=m-1;
+        int borrow=0;
+
+        while(k>=0){
+            int differnce = borrow + arr2[j] - (i>=0 ? arr1[i]:0);
+            if(differnce < 0){
+                differnce += 10;
+                borrow = -1;
+            }else{
+                borrow = 0;
+            }
+
+            ans[k] = differnce;
+
+            i--;
+            j--;
+            k--;
+        }
+    }
+
 
     public static void main(String[] args){
         int n = sc.nextInt();
